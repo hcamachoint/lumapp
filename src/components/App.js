@@ -22,7 +22,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header title="Lumapp"/>
+        <Header title="Realog"/>
         <Content body={children} />
         <Footer copyright="&copy; Lumapp 2018" />
       </div>
