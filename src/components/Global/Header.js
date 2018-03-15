@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; //ayuda a definir las propiedades y sus tipos a recibir
 import { Link } from 'react-router-dom';
+import AppBar from 'material-ui/AppBar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class Header extends Component {
 
@@ -14,18 +16,23 @@ class Header extends Component {
     const{title, items} = this.props;
 
     return (
-      <div className="Header">
-        <header>
-          <h1>{title}</h1>
-          <ul className="Menu">
-            {
-              items && items.map(
-                (item, key) => <li key={key}><Link to={item.url}>{item.title}</Link></li>
-              )
-            }
-          </ul>
-        </header>
-      </div>
+      <MuiThemeProvider>
+        <div className="Header">
+        <AppBar
+          title={title}
+          iconClassNameRight="muidocs-icon-navigation-expand-more"
+        />
+          <header>
+            <ul className="Menu">
+              {
+                items && items.map(
+                  (item, key) => <li key={key}><Link to={item.url}>{item.title}</Link></li>
+                )
+              }
+            </ul>
+          </header>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
