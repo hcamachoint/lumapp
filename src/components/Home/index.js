@@ -2,10 +2,11 @@
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import Paper from 'material-ui/Paper';
 
 const style = {
+  height: 100,
+  width: 100,
   margin: 20,
   textAlign: 'center',
   display: 'inline-block',
@@ -16,20 +17,13 @@ class Home extends Component{
   render(){
     return(
       <MuiThemeProvider>
-        <Card style={style}>
-          <CardHeader
-            title="Home Page"
-            subtitle="Subtitle"
-            actAsExpander={true}
-            showExpandableButton={true}
-          />
-          <CardText expandable={true}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-            Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-            Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-          </CardText>
-        </Card>
+        <div>
+          <Paper style={style} zDepth={1} />
+          <Paper style={style} zDepth={2} />
+          <Paper style={style} zDepth={3} />
+          <Paper style={style} zDepth={4} />
+          <Paper style={style} zDepth={5} />
+        </div>
       </MuiThemeProvider>
     );
   };

@@ -24,7 +24,7 @@ class App extends Component {
       <div className="App">
         <Header title="Realog"/>
         <Content body={children} />
-        <Footer copyright="&copy; Lumapp 2018" />
+        <Footer copyright="&copy; Realog 2018" />
       </div>
     );
   }
